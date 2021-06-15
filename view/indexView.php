@@ -24,6 +24,7 @@
       <td><?php echo $book->getWritter() ?></td>
       <td  class="table-active"><?php echo $book->getRelease_date() ?></td>
       <td><?php echo $book->getLoaning_status() ?></td>
+      <td><a class="btn btn-danger" href="book.php?id=<?php echo $book->getId()?>" >Voir le livre</a>
     </tr>
     <?php endforeach;?>
   </tbody>

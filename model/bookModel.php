@@ -16,9 +16,15 @@ class bookModel extends dataBase{
   }
 
   // Récupère un livre
-  public function getBook() {
-
+  public function getBook(int $id) {
+    $query= $this->db->prepare("SELECT * FROM books WHERE id=:id");
+    $query->execute([
+      "id"=>$id
+    ]);
+    $result= $query->fetch(PDO::FETCH_ASSOC);
+    return $result;
   }
+   
 
   // Ajoute un nouveau livre
   public function addBook() {
@@ -31,3 +37,4 @@ class bookModel extends dataBase{
   }
 
 }
+?>

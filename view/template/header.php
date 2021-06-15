@@ -18,27 +18,5 @@
             
         </section>
 
-
-
-        <!-- <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="index.php" href="index.php">Acceuil</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mes comptes</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="virement.php">Faire un virement</a></li>
-                <li><a class="dropdown-item" href="createAccount.php">Créer un compte</a></li>
-                <li><a class="dropdown-item" href="deleteAccount.php">Supprimer un compte</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact</a>
-            </li> -->
-        </ul>
-        
-
     </header>
        <main>
