@@ -3,13 +3,17 @@
 class Book {
 
     protected int $id;
-    protected string $firstname;
-    protected string $lastname;
-    protected string $birth_date;
-    protected string $mail;
-    protected int $phone;
-    protected string $postal_code;
-    protected string $city;
+    protected string $title;
+    protected string $writter;
+    protected string $release_date;
+    protected string $category;
+    protected string $description;
+    protected string $editor;
+    protected string $loaning_status;
+    protected ?string $loaning_date;
+    protected ?int $customer_id;
+
+
 
     public function __construct($data) {
         if($data){
@@ -31,33 +35,79 @@ class Book {
     }
 
 
-    public function setFirstname($firstname){
-        $this->firstname=$firstname;
+    public function setTitle(string $title){
+        $this->title=$title;
     }
-    public function getFirstname(){
-        return $this->firstname;
-    }
-
-
-    public function setBirth_date($birth_date){
-        $this->$birth_date;
-    }
-    public function getBirth_date(){
-        return $this->birth_date;
+    public function getTitle(){
+        return $this->title;
     }
 
 
-    
+    public function setWritter(string $writter){
+        $this->writter=$writter;
+    }
+    public function getWritter(){
+        return $this->writter;
+    }
 
 
+    public function setRelease_date(string $release_date){
+        $this->release_date=$release_date;
+    }
+    public function getRelease_date(){
+        return $this->release_date;
+    }
 
 
+    public function setDescription(string $description){
+        $this->description=$description;
+    }
+    public function getDescription(){
+        return $this->description;
+    }
 
 
+    public function setEditor(string $editor){
+        $this->editor=$editor;
+    }
+    public function getEditor(){
+        return $this->editor;
+    }
 
 
+    public function setLoaning_status(string $loaning_status){
+        $this->loaning_status=$loaning_status;
+    }
+    public function getLoaning_status(){
+        return $this->loaning_status;
+    }
 
 
+    public function setLoaning_date(?string $loaning_date){
+        $this->loaning_date=$loaning_date;
+    }
+    public function getLoaning_date(){
+        return $this->loaning_date;
+    }
 
 
+    public function setCustomer_id(?int $customer_id){
+        $this->customer_id=$customer_id;
+    }
+    public function getCustomer_id(){
+        return $this->customer_id;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,16 +1,12 @@
 <?php
 // Controlleur qui gérer l'affichage de tous les livres
-include "view/template/header.php";
+    
+    require "model/entity/book.php";
+    require "model/bookModel.php";
 
+    $bookModel = new bookModel();
+    $books = $bookModel->getBooks();
 
-
-
-
-
-
-
-
-
-include "view/template/footer.php";
+    require "view/indexView.php";
 
 ?>

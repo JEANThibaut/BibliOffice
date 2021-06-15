@@ -31,7 +31,7 @@ class User {
     }
 
 
-    public function setFirstname($firstname){
+    public function setFirstname(string $firstname){
         $this->firstname=$firstname;
     }
     public function getFirstname(){
@@ -39,7 +39,7 @@ class User {
     }
 
 
-    public function setLastname($lastname){
+    public function setLastname(string $lastname){
         $this->lastname=$lastname;
     }
     public function getLastname(){
@@ -47,14 +47,14 @@ class User {
     }
 
 
-    public function setBirth_date($birth_date){
+    public function setBirth_date(string $birth_date){
         $this->birth_date=$birth_date;
     }
     public function getBirth_date(){
         return $this->birth_date;
     }
 
-    public function setMail($mail){
+    public function setMail(string $mail){
         $this->mail=$mail;
     }
     public function getMail(){
@@ -62,14 +62,14 @@ class User {
     }
 
 
-    public function setPhone($phone){
+    public function setPhone(int $phone){
         $this->phone=$phone;
     }
     public function getPhone(){
         return $this->phone;
     }
 
-    public function setPostal_code($postal_code){
+    public function setPostal_code(string $postal_code){
         $this->postal_code=$postal_code;
     }
     public function getPostal_code(){
@@ -77,10 +77,12 @@ class User {
     }
 
 
-    public function setCity($city){
+    public function setCity(string $city){
         $this->city=$city;
     }
     public function getCity(){
         return $this->city;
     }
 }
+
+?>
