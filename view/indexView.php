@@ -6,10 +6,28 @@
 
 
 <h2> Liste des livres </h2>
-<?php foreach($books as $book): ?>
-<p>Titre du livre : <?php echo $book->getTitle()?> </p>
-<?php endforeach;?>
 
+
+<table class="table table-dark text-center">
+  <thead>
+    <th>Id</th>
+      <td>Titres</td>
+      <td>Auteur</td>
+      <td>Date de parussion</td>
+      <td>Disponibilité</td>
+  </thead>
+  <tbody>
+  <?php foreach($books as $book): ?>
+    <tr>
+      <th><?php echo $book->getId() ?></th>
+      <td class="table-active"><?php echo $book->getTitle() ?></td>
+      <td><?php echo $book->getWritter() ?></td>
+      <td  class="table-active"><?php echo $book->getRelease_date() ?></td>
+      <td><?php echo $book->getLoaning_status() ?></td>
+    </tr>
+    <?php endforeach;?>
+  </tbody>
+</table>
 
 
 
