@@ -7,7 +7,7 @@ class Book {
     protected string $writter;
     protected string $release_date;
     protected string $category;
-    protected string $description;
+    protected string $book_description;
     protected string $editor;
     protected string $loaning_status;
     protected ?string $loaning_date;
@@ -20,15 +20,15 @@ class Book {
             //Hydrateur auto, permet de ne pas appeler les setter à la main
             foreach($data as $key=>$value){
                 $setter = "set" . ucfirst($key);
-                if(method_exists($this,$setter)){
-                    $this->$setter($value);
-                }
+                if(method_exists($this,$setter)){                    
+                    $this->$setter($value);                      
+                }    
             }
         }    
     }
 
     public function setId(int $id){
-        $this->id=$id;
+         $this->id=$id;
     }
     public function getId(){
         return $this->id;
@@ -59,11 +59,21 @@ class Book {
     }
 
 
-    public function setDescription(string $description){
-        $this->description=$description;
+    
+    public function setCategory(string $category){
+        $this->category=$category;
     }
-    public function getDescription(){
-        return $this->description;
+    public function getCategory(){
+        return $this->category;
+    }
+
+
+
+    public function setBook_description(string $book_description){
+        $this->book_description=$book_description;
+    }
+    public function getBook_description(){
+        return $this->book_description;
     }
 
 
@@ -94,6 +104,16 @@ class Book {
     public function setCustomer_id(?int $customer_id){
         $this->customer_id=$customer_id;
     }
+
+    // public function setCustomer_id($customer_id){
+    //     if($customer_id){
+    //     $this->customer_id=$customer_id;
+    //     }
+    //     else{
+    //     $this->customer_id=null;
+    //     }
+    // }
+
     public function getCustomer_id(){
         return $this->customer_id;
     }
