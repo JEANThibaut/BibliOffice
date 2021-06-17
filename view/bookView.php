@@ -25,7 +25,7 @@
             <p>Résumé : </br> <?php echo $book->getBook_description();?></p>
     </div>
     <div class="row">
-        <div class="col card text-center py-2 mx-3">
+        <div class="col card text-center py-2 mx-2 ">
             <p>Disponibilité : </p>
              <?php if($book->getLoaning_status()=="Indisponible"):?>
                 <p class="text-danger"><?php echo $book->getLoaning_status();?></p>
@@ -39,8 +39,16 @@
             </a>
         <?php else:?>
         <form action="" method= "POST">
-            <input type="submit" name ="delete" value="Supprimer le livre" class="btn btn-danger  w-25 mx-5 "/>
-            <input type="submit" name ="loaning" value="Attribuer le livre" class="btn btn-dark  w-25 mx-5  "/>
+            <div class="col card text-center my-3">
+                <div>
+                    <input type="submit" name ="delete" value="Supprimer le livre" class="btn btn-danger w-25 mx-5 my-3 "/>
+                </div>
+                <div>
+                    <label for="account_id" class="form-label">Selectionner l'utilisateur</label>
+                    <input type="text" name="account_id" id="account_id">
+                    <input type="submit" name ="loaning" value="Attribuer le livre" class="btn btn-dark  w-25 mx-5 my-3 "/>
+                </div>
+            </div>
         </form>
 
         <?php endif;?>

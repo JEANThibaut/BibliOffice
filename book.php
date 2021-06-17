@@ -21,15 +21,15 @@
     }
 
     if(!empty($_POST["delete"])){
-       $deleteBook=$booksModel->deleteBook($book);
+       $booksModel->deleteBook($book);
+        header ("Location:index.php");
+    }
+    if(!empty($_POST["loaning"])){
+        $book->setLoaning_status("Indisponible");
+        $booksModel->updateBookStatus($book, $_POST["account_id"]);
         header ("Location:index.php");
     }
     
-   
-
-
-
-
 
     include "view/bookView.php";
 ?>

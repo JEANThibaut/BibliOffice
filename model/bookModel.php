@@ -44,8 +44,16 @@ class bookModel extends dataBase{
   }
 
   // Met à jour le statut d'un livre emprunté
-  public function updateBookStatus() {
-
+  public function updateBookStatus(Book $data, int $id) {
+    $query=$this->db->prepare(
+      "UPDATE books SET loaning_status=:loaning_status, customer_id=:customer_id WHERE id=:id"
+    );
+    $query->execute([
+      "id"=>$data->getId(),
+      "loaning_status" => $data->getLoaning_status(),
+      "customer_id" => $id
+      
+    ]);
   }
 
 }
