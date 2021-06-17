@@ -2,7 +2,7 @@
 // Classe représetant les livres stockés en base de données
 class Book {
 
-    protected int $id;
+    protected ?int $id;
     protected string $title;
     protected string $writter;
     protected string $release_date;
@@ -27,7 +27,7 @@ class Book {
         }    
     }
 
-    public function setId(int $id){
+    public function setId(?int $id){
          $this->id=$id;
     }
     public function getId(){

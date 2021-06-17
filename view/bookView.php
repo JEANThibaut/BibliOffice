@@ -26,12 +26,17 @@
     </div>
     <div class="row">
         <div class="col card text-center py-2 mx-3">
-            <p>Disponibilité : </br> <?php echo $book->getLoaning_status();?></p>
+            <p>Disponibilité : </p>
+             <?php if($book->getLoaning_status()=="Indisponible"):?>
+                <p class="text-danger"><?php echo $book->getLoaning_status();?></p>
+             <?php elseif($book->getLoaning_status()=="Disponible"):?>
+                <p class="text-success"><?php echo $book->getLoaning_status();?></p>
+             <?php endif ?>
         </div>
         <?php if($customer):?>
-            <div class="col card text-center py-2 mx-3">
+            <a href="user.php" class="col card text-center py-2 mx-3">
               <p>Emprunté par :  </br> <?php echo $customer->getFirstname()?> </br> <?php echo $customer->getLastname()?></p>
-            </div>
+            </a>
         <?php endif;?>
 
     </div>
