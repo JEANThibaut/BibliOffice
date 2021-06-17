@@ -19,9 +19,7 @@ class bookModel extends dataBase{
   // Récupère un livre
   public function getBook(int $id) {
     $query= $this->db->prepare(
-      "SELECT b.*, c.id FROM books AS b
-      LEFT JOIN customer AS c
-      ON b.customer_id = c.id
+      "SELECT b.* FROM books AS b
       WHERE b.id=:id");
     $query->execute([
       "id"=>$id
@@ -35,6 +33,14 @@ class bookModel extends dataBase{
   // Ajoute un nouveau livre
   public function addBook() {
 
+  }
+
+  public function deleteBook(Book $data){
+    $query=$this->db->prepare(
+      "DELETE FROM books WHERE id=:id");
+    $query->execute([
+      "id"=> $data->getId()
+    ]);
   }
 
   // Met à jour le statut d'un livre emprunté

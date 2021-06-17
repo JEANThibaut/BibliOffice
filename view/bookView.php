@@ -6,7 +6,7 @@
 <div class="w-75 m-auto my-3">
     <div class="card-header text-center my-3 ">
         <h2 ><?php echo $book->getTitle() ?></h2>
-        <h3>Auteur : <?php echo $book->getWritter();?></h3>
+        <h3><?php echo $book->getWritter();?></h3>
     </div>
     <div class="container">
         <div class="row">
@@ -34,9 +34,15 @@
              <?php endif ?>
         </div>
         <?php if($customer):?>
-            <a href="user.php" class="col card text-center py-2 mx-3">
+            <a href="customer.php" class="col card text-center py-2 mx-3">
               <p>Emprunté par :  </br> <?php echo $customer->getFirstname()?> </br> <?php echo $customer->getLastname()?></p>
             </a>
+        <?php else:?>
+        <form action="" method= "POST">
+            <input type="submit" name ="delete" value="Supprimer le livre" class="btn btn-danger  w-25 mx-5 "/>
+            <input type="submit" name ="loaning" value="Attribuer le livre" class="btn btn-dark  w-25 mx-5  "/>
+        </form>
+
         <?php endif;?>
 
     </div>

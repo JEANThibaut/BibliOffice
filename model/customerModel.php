@@ -20,7 +20,7 @@ class customerModel extends dataBase {
   }
 
   // Récupère un utilisateur par son code personnel
-  public function getUser() {
+  public function getCustomer() {
 
   }
 }
