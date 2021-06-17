@@ -14,8 +14,11 @@
     $customerModel= new CustomerModel();
 
     if($book->getCustomer_id()){
-    $customer= $customerModel->getCustomerById($book->getCustomer_id());
-    var_dump($customer);}
+        $customer= $customerModel->getCustomerById($book->getCustomer_id());
+    }
+    else {
+        $customer=false;
+    }
 
 
     

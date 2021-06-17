@@ -24,6 +24,17 @@
     <div class="card text-center my-3">
             <p>Résumé : </br> <?php echo $book->getBook_description();?></p>
     </div>
+    <div class="row">
+        <div class="col card text-center py-2 mx-3">
+            <p>Disponibilité : </br> <?php echo $book->getLoaning_status();?></p>
+        </div>
+        <?php if($customer):?>
+            <div class="col card text-center py-2 mx-3">
+              <p>Emprunté par :  </br> <?php echo $customer->getFirstname()?> </br> <?php echo $customer->getLastname()?></p>
+            </div>
+        <?php endif;?>
+
+    </div>
 </div>
 
 

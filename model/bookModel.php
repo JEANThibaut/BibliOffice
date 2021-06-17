@@ -19,9 +19,9 @@ class bookModel extends dataBase{
   // Récupère un livre
   public function getBook(int $id) {
     $query= $this->db->prepare(
-      "SELECT b.*, c.id AS customer_id, c.firstname, c.lastname FROM books AS b
+      "SELECT b.*, c.id FROM books AS b
       LEFT JOIN customer AS c
-      ON b.customer_id =customer_id
+      ON b.customer_id = c.id
       WHERE b.id=:id");
     $query->execute([
       "id"=>$id
