@@ -27,7 +27,7 @@ class Customer {
         $this->id=$id;
     }
     public function getId(){
-        return $this->id;
+        return htmlspecialchars($this->id);
     }
 
 
@@ -35,7 +35,7 @@ class Customer {
         $this->firstname=$firstname;
     }
     public function getFirstname(){
-        return $this->firstname;
+        return htmlspecialchars($this->firstname);
     }
 
 
@@ -43,7 +43,7 @@ class Customer {
         $this->lastname=$lastname;
     }
     public function getLastname(){
-        return $this->lastname;
+        return htmlspecialchars($this->lastname);
     }
 
 
@@ -51,14 +51,14 @@ class Customer {
         $this->birth_date=$birth_date;
     }
     public function getBirth_date(){
-        return $this->birth_date;
+        return htmlspecialchars($this->birth_date);
     }
 
     public function setMail(string $mail){
         $this->mail=$mail;
     }
     public function getMail(){
-        return $this->mail;
+        return htmlspecialchars($this->mail);
     }
 
 
@@ -66,14 +66,14 @@ class Customer {
         $this->phone=$phone;
     }
     public function getPhone(){
-        return $this->phone;
+        return htmlspecialchars($this->phone);
     }
 
     public function setPostal_code(string $postal_code){
         $this->postal_code=$postal_code;
     }
     public function getPostal_code(){
-        return $this->postal_code;
+        return htmlspecialchars($this->postal_code);
     }
 
 
@@ -81,7 +81,7 @@ class Customer {
         $this->city=$city;
     }
     public function getCity(){
-        return $this->city;
+        return htmlspecialchars($this->city);
     }
 }
 

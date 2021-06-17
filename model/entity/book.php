@@ -31,7 +31,7 @@ class Book {
          $this->id=$id;
     }
     public function getId(){
-        return $this->id;
+        return htmlspecialchars($this->id);
     }
 
 
@@ -39,7 +39,7 @@ class Book {
         $this->title=$title;
     }
     public function getTitle(){
-        return $this->title;
+        return htmlspecialchars($this->title);
     }
 
 
@@ -47,7 +47,7 @@ class Book {
         $this->writter=$writter;
     }
     public function getWritter(){
-        return $this->writter;
+        return htmlspecialchars($this->writter);
     }
 
 
@@ -55,7 +55,7 @@ class Book {
         $this->release_date=$release_date;
     }
     public function getRelease_date(){
-        return $this->release_date;
+        return htmlspecialchars($this->release_date);
     }
 
 
@@ -64,7 +64,7 @@ class Book {
         $this->category=$category;
     }
     public function getCategory(){
-        return $this->category;
+        return htmlspecialchars($this->category);
     }
 
 
@@ -73,7 +73,7 @@ class Book {
         $this->book_description=$book_description;
     }
     public function getBook_description(){
-        return $this->book_description;
+        return htmlspecialchars($this->book_description);
     }
 
 
@@ -81,7 +81,7 @@ class Book {
         $this->editor=$editor;
     }
     public function getEditor(){
-        return $this->editor;
+        return htmlspecialchars($this->editor);
     }
 
 
@@ -89,7 +89,7 @@ class Book {
         $this->loaning_status=$loaning_status;
     }
     public function getLoaning_status(){
-        return $this->loaning_status;
+        return htmlspecialchars($this->loaning_status);
     }
 
 
@@ -97,7 +97,7 @@ class Book {
         $this->loaning_date=$loaning_date;
     }
     public function getLoaning_date(){
-        return $this->loaning_date;
+        return htmlspecialchars($this->loaning_date);
     }
 
 
@@ -105,17 +105,8 @@ class Book {
         $this->customer_id=$customer_id;
     }
 
-    // public function setCustomer_id($customer_id){
-    //     if($customer_id){
-    //     $this->customer_id=$customer_id;
-    //     }
-    //     else{
-    //     $this->customer_id=null;
-    //     }
-    // }
-
     public function getCustomer_id(){
-        return $this->customer_id;
+        return htmlspecialchars($this->customer_id);
     }
 }
 

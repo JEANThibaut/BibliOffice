@@ -7,8 +7,7 @@ class bookModel extends dataBase{
 
   // Récupère tous les livres
   public function getBooks() {
-    $query= $this->db->prepare("SELECT * FROM books");
-    $query->execute();
+    $query= $this->db->query("SELECT * FROM books");
     $books=$query->fetchAll(PDO::FETCH_ASSOC);
     foreach ($books as $key=>$book){
       $books[$key]= new Book($book);
@@ -31,9 +30,14 @@ class bookModel extends dataBase{
    
 
   // Ajoute un nouveau livre
-  public function addBook() {
+  // public function addBook(Book $data) {
+  //   $query=$this->db->prepare(
+  //     "INSERT INTO books (title, writter, release_date, category, book_description, editor, loaning_status, loaning_date)
+  //     VALUES 
+  //     "
 
-  }
+  //   )
+  // }
 
   public function deleteBook(Book $data){
     $query=$this->db->prepare(

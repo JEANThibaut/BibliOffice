@@ -8,8 +8,7 @@
 
     $booksModel= new bookModel();
     $book= $booksModel->getBook($_GET["id"]);
-    var_dump($book);
-    var_dump($_POST);
+  
 
     $customerModel= new CustomerModel();
 

@@ -11,7 +11,7 @@
         <th>Numéro</th>
           <td>Titres</td>
           <td>Auteur</td>
-          <td>Date de parussion</td>
+          <td>Date de parution</td>
           <td>Disponibilité</td>
           <td>Détails</td>
       </thead>
