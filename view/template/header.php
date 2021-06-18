@@ -15,13 +15,13 @@
     <header>
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link " href="index.php">Acceuil</a>
+          <a class="btn btn-secondary" href="index.php">Acceuil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Voir tout les utilisateur</a>
+          <a class="btn btn-secondary" href="#">Voir tout les utilisateur</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="newBook.php">Ajouter un livre</a>
+          <a class="btn btn-secondary" href="newBook.php">Ajouter un livre</a>
         </li>
       </ul>
     </header>

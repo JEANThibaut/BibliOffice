@@ -41,7 +41,7 @@ class bookModel extends dataBase{
       "release_date"=>$data->getRelease_date(),
       "category"=>$data->getCategory(),
       "book_description"=>$data->getBook_description(),
-      "editor"=>$data->getEditor(),
+      "editor"=>$data->getEditor()
     ]);
   }
 
@@ -54,7 +54,7 @@ class bookModel extends dataBase{
   }
 
   // Met à jour le statut d'un livre emprunté
-  public function updateBookStatus(Book $data, int $id) {
+  public function updateBookStatus(Book $data, ?int $id) {
     $query=$this->db->prepare(
       "UPDATE books SET loaning_status=:loaning_status, loaning_date=NOW(), customer_id=:customer_id  WHERE id=:id"
     );

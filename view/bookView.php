@@ -41,7 +41,10 @@
             <div class="col-sm-12 col-md-6 col-lg-6 card text-center py-2"> 
                 <h4>Emprunté par :  </h4> 
                 <p><?php echo $customer->getFirstname()?> <?php echo $customer->getLastname()?></p>
-                <a href="customer.php" class="btn btn-dark">Voir l'utilisateur</a>
+                <form action="" method="POST">
+                    <a href="customer.php" class="btn btn-dark w-50 text-center">Voir l'utilisateur</a>
+                    <input type="submit" name="return" value= "Rendre le livre" class="btn btn-secondary w-50 my-2  mx-5 "/>
+                </form>
             </div>
         <?php else:?>
             <div class="col-sm-12 col-md-6 col-lg-6 card text-center ">

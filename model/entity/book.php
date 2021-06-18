@@ -2,6 +2,8 @@
 // Classe représetant les livres stockés en base de données
 class Book {
 
+    const STATUS=['Disponible','Indisponible'];
+
     protected ?int $id;
     protected string $title;
     protected string $writter;
@@ -86,8 +88,12 @@ class Book {
 
 
     public function setLoaning_status(string $loaning_status){
-        $this->loaning_status=$loaning_status;
+        if(in_array($loaning_status, self:: STATUS)){
+            $this->loaning_status=$loaning_status;
+        }
     }
+
+
     public function getLoaning_status(){
         return htmlspecialchars($this->loaning_status);
     }
