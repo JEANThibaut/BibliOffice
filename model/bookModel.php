@@ -29,15 +29,21 @@ class bookModel extends dataBase{
   }
    
 
-  // Ajoute un nouveau livre
-  // public function addBook(Book $data) {
-  //   $query=$this->db->prepare(
-  //     "INSERT INTO books (title, writter, release_date, category, book_description, editor, loaning_status)
-  //     VALUES 
-  //     "
+  //Ajoute un nouveau livre
+  public function addBook(Book $data) {
+    $query=$this->db->prepare(
+      "INSERT INTO books (title, writter, release_date, category, book_description, editor, loaning_status)
+      VALUES (:title, :writter, :release_date, :category, :book_descrition, :editor, 'Disponible')");
+    $result=$query->execute([
 
-  //   )
-  // }
+      "title"=>$data->getTitle(),
+      "writter"=>$data->getWritter(),
+      "release_date"=>$data->getRelease_date(),
+      "category"=>$data->getCategory(),
+      "book_description"=>$data->getBook_description(),
+      "editor"=>$data->getEditor(),
+    ]);
+  }
 
   public function deleteBook(Book $data){
     $query=$this->db->prepare(
