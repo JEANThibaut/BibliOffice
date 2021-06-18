@@ -8,8 +8,6 @@
 
     $booksModel= new bookModel();
     $book= $booksModel->getBook($_GET["id"]);
-  
-
     $customerModel= new CustomerModel();
 
     if($book->getCustomer_id()){

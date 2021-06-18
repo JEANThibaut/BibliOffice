@@ -38,9 +38,11 @@
              <?php endif ?>
         </div>
         <?php if($customer):?>
-            <a href="customer.php" class="col-sm-12 col-md-6 col-lg-6 text-decoration-none text-dark col card text-center py-2 ">
-              <p>Emprunté par :  </br> <?php echo $customer->getFirstname()?> </br> <?php echo $customer->getLastname()?></p>
-            </a>
+            <div class="col-sm-12 col-md-6 col-lg-6 card text-center py-2"> 
+                <h4>Emprunté par :  </h4> 
+                <p><?php echo $customer->getFirstname()?> <?php echo $customer->getLastname()?></p>
+                <a href="customer.php" class="btn btn-dark">Voir l'utilisateur</a>
+            </div>
         <?php else:?>
             <div class="col-sm-12 col-md-6 col-lg-6 card text-center ">
                 <form action="" method= "POST">
@@ -49,15 +51,12 @@
                             <label for="account_id" class="form-label my-2">Séléctionner l'utilisateur</label>
                         </div>
                         <input type="text" name="account_id" id="account_id" class="my-2">
-                        <input type="submit" name ="loaning" value="Attribuer le livre" class="btn btn-dark my-2  mx-5 "/>
+                        <input type="submit" name ="loaning" value="Attribuer le livre" class="btn btn-secondary my-2  mx-5 "/>
                         <input type="submit" name ="delete" value="Supprimer le livre" class="btn btn-danger my-2 mx-5 "/>
                     </div>
                 </form>
             </div>
-       
-
         <?php endif;?>
-
     </div>
 </div>
 

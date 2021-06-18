@@ -32,7 +32,7 @@ class bookModel extends dataBase{
   // Ajoute un nouveau livre
   // public function addBook(Book $data) {
   //   $query=$this->db->prepare(
-  //     "INSERT INTO books (title, writter, release_date, category, book_description, editor, loaning_status, loaning_date)
+  //     "INSERT INTO books (title, writter, release_date, category, book_description, editor, loaning_status)
   //     VALUES 
   //     "
 
@@ -50,7 +50,7 @@ class bookModel extends dataBase{
   // Met à jour le statut d'un livre emprunté
   public function updateBookStatus(Book $data, int $id) {
     $query=$this->db->prepare(
-      "UPDATE books SET loaning_status=:loaning_status, customer_id=:customer_id WHERE id=:id"
+      "UPDATE books SET loaning_status=:loaning_status, loaning_date=NOW(), customer_id=:customer_id  WHERE id=:id"
     );
     $query->execute([
       "id"=>$data->getId(),
