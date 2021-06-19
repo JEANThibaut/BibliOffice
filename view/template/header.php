@@ -11,18 +11,26 @@
     <title>Bibli'Office</title>
   </head>
   <body>
-    <h1>Bibli'Office</h1>
+    
     <header>
-      <ul class="nav nav-pills nav-fill">
-        <li class="nav-item">
-          <a class="btn btn-secondary" href="index.php">Acceuil</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-secondary" href="#">Voir tout les utilisateur</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-secondary" href="newBook.php">Ajouter un livre</a>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="row">
+        <h1>Bibli'Office</h1>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="index.php">Acceuil</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="customers.php">Voir tout les utilisateur</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="newBook.php">Ajouter un livre</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="newCustomer.php">Ajouter un utilisateur</a>
+          </li>
+        </ul>
+      </div>
+    </div>  
     </header>
 <main>

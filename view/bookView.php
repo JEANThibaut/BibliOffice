@@ -42,7 +42,7 @@
                 <h4>Emprunté par :  </h4> 
                 <p><?php echo $customer->getFirstname()?> <?php echo $customer->getLastname()?></p>
                 <form action="" method="POST">
-                    <a href="customer.php" class="btn btn-dark w-50 text-center">Voir l'utilisateur</a>
+                    <a class="btn btn-secondary" href="customer.php?id=<?php echo $customer->getId()?>">Voir l'utilisateur</a>
                     <input type="submit" name="return" value= "Rendre le livre" class="btn btn-secondary w-50 my-2  mx-5 "/>
                 </form>
             </div>

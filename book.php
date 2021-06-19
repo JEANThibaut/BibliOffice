@@ -36,10 +36,5 @@
          }
     }
     
-   
-
-    
-    
-
     include "view/bookView.php";
 ?>

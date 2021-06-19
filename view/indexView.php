@@ -5,7 +5,7 @@
 
 
   <div class ="text-center">
-    <h2> Liste des livres </h2>
+    <h2 class="my-3"> Liste des livres </h2>
     <table class="table w-75 mx-auto my-3">
       <thead>
         <th>Numéro</th>
