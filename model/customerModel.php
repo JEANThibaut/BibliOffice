@@ -40,4 +40,22 @@ class customerModel extends dataBase {
     $result=$query->fetchall(PDO::FETCH_ASSOC);
     return $result;
   }
+
+
+  public function addCustomer(Customer $data){
+    $query=$this->db->prepare( 
+      "INSERT INTO customer(firstname, lastname, birth_date, postal_code, city, phone, mail)
+      VALUES (:firstname, :lastname, :birth_date, :postal_code, :city, :phone, :mail)");
+      
+    $query->execute([
+      "firstname"=>$data->getFirstname(),
+      "lastname"=>$data->getLastname(),
+      "birth_date"=>$data->getBirth_date(),
+      "postal_code"=>$data->getPostal_code(),
+      "city"=>$data->getCity(),
+      "phone"=>$data->getPhone(),
+      "mail"=>$data->getMail()
+    ]);
+   
+  }
 }
