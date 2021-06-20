@@ -9,6 +9,31 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+ 
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #6c91c2;
+    padding: 1em;
+}
+.logo{
+    max-width: 40vw;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+footer{
+    min-width: 100vw;
+    background-color: #6c91c2;
+}
+
+.btnColor{
+    background-color: #C3C9E9;
+}
 
 html {
     color: #222;

@@ -6,9 +6,9 @@
 
     <div class="container">
         <div class="row">
-            <div class="text-center">
-                <h2 class="my-3">Ajouter un nouvel utilisateur</h2>
-                <form action="" method="POST">
+            <div class="text-center my-3">
+                <h2 class="my-3" >Ajouter un nouvel utilisateur</h2>
+                <form action="" method="POST" class="w-50 m-auto form-control ">
                     <div class="col-sm-10 col-md-8 my-2 m-auto">
                         <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Prénom">
                     </div>

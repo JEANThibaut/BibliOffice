@@ -5,7 +5,6 @@
  if(!empty($_POST)){
      $newCustomerModel= new customerModel();
      $newCustomer = new Customer($_POST);
-     var_dump($newCustomerModel);
      $newCustomerModel->addCustomer($newCustomer);
      
  }

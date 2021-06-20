@@ -2,7 +2,7 @@
     include "view/template/header.php";
 ?>
 
-    <h1 class="text-center my-3">Listes des utilisateurs</h1>
+    <h2 class="text-center my-3">Listes des utilisateurs</h2>
     <table class="table w-75 mx-auto my-3 text-center">
       <thead>
         <th>Numéro</th>

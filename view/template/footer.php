@@ -1,7 +1,6 @@
 
   </main>
-    <footer class="bg-secondary
-     text-white  my-0 py-3">
+    <footer class="text-white  my-0 py-3">
       <section class= "container text-center">
         <p class="lead fst-italic">Réaliser par JEAN Thibaut</p>
       </section>
